@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Snooker</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <script src="libraries/p5.min.js"></script>
+    <!-- <script src="libraries/p5.sound.min.js"></script> -->
+  </head>
+
+  <body>
+    <script src="sketch.js"></script>
+    <script src="ball.js"></script>
+    <script src="stick.js"></script>
+    <script src="aimHelper.js"></script>
+    <script src="borderLine.js"></script>
+    <script src="collisionSystem.js"></script>
+    <script src="player.js"></script>
+    <script src="score.js"></script>
+    <script src="board.js"></script>
+    <script src="spotLight.js"></script>
+    <script src="helper.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
+
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+
+    
+
+    <div id="a">
+      <button type="button" class="btn btn-secondary btn-lg" onclick="singlePlay()">PRACTICE MODE</button>
+      <button type="button" class="btn btn-secondary btn-lg" onclick="invite()">Invite</button>
+      <input type="text" id="socket_id" value="" placeholder="socket id"></p>
+    </div>
+
+    <div id="chat_window" hidden>
+      <div class="container d-flex justify-content-center">
+        <div class="card mt-5">
+          <div class="d-flex flex-row justify-content-between p-3 adiv text-white">
+            <i class="fas fa-chevron-left"></i>
+            <span class="pb-3">Chat box</span>
+            <i class="fas fa-times"></i>
+          </div>
+            <div class="d-flex flex-row p-3">
+              <img src="https://img.icons8.com/color/48/000000/circled-user-female-skin-type-7.png" width="30" height="30">
+              <div class="chat ml-2 p-3">Hello and thankyou for visiting birdlymind. Please click the video above</div>
+            </div>
+      
+            <div class="d-flex flex-row p-3">
+              <div class="bg-white mr-2 p-3"><span class="text-muted">Hello and thankyou for visiting birdlynind.</span></div>
+              <img src="https://img.icons8.com/color/48/000000/circled-user-male-skin-type-7.png" width="30" height="30">
+            </div>
+            
+            <div class="d-flex flex-row p-3">
+              <img src="https://img.icons8.com/color/48/000000/circled-user-female-skin-type-7.png" width="30" height="30">
+              <div class="myvideo ml-2"><img src="https://imgur.com/GOxU1jx.png" width="200"></div>
+            </div>
+            
+            <div class="d-flex flex-row p-3">
+              <img src="https://img.icons8.com/color/48/000000/circled-user-female-skin-type-7.png" width="30" height="30">
+              <div class="chat ml-2 p-3"><span class="text-muted dot">. . .</span></div>
+            </div>
+            
+            <div class="form-group px-3">
+              <textarea class="form-control" rows="5" placeholder="Type your message"></textarea>
+            </div>
+        </div>
+      </div>
+    </div>
+    
+
+
+    
+  </body>
+</html>
